@@ -8,7 +8,7 @@ on:
 
 jobs:
 
-  build:
+  build: 
 
     runs-on: ubuntu-latest
 
@@ -26,7 +26,6 @@ jobs:
         format: "${major}.${minor}.${patch}-prerelease${increment}"
       id: version
 
-        
     - name: Docker login
       env: 
         DOCKER_USER: ${{ secrets.DOCKER_USER }}
