@@ -13,7 +13,7 @@ COPY . .
 RUN yarn build
 
 FROM node:19-alpine3.15 as prod-deps
-WORKDIR /app
+WORKDIR /app 
 COPY package.json package.json
 RUN yarn install --prod --frozen-lockfile
 
